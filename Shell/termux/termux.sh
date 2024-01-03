@@ -41,11 +41,6 @@ info "Install oh-my-zsh"
 
 git clone https://github.com/ohmyzsh/ohmyzsh.git "$HOME/.oh-my-zsh" --depth 1
 
-# Change theme to dst
-info "Change theme to dst"
-
-log "sed -i 's/robbyrussell/dst/' ~/.zshrc"
-sed -i 's/robbyrussell/dst/' ~/.zshrc
 
 # Install oh-my-zsh plugins
 info "Install oh-my-zsh plugins"
