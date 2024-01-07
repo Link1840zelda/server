@@ -1,21 +1,22 @@
 #!/data/data/com.termux/files/usr/bin/bash
 
-# Colors
-NC="\e[0m"              # No Color
-BLACK='\e[1;30m'        # Black
-RED='\e[1;31m'          # Red
-GREEN='\e[1;32m'        # Green
-YELLOW='\e[1;33m'       # Yellow
-BLUE='\e[0;34m'         # Blue
-PURPLE='\e[1;35m'       # Purple
-CYAN='\e[1;36m'         # Cyan
-WHITE='\e[1;37m'        # White
+# For 256-Color Terminals
+BLACK='\e[38;5;0m'    # Black
+RED='\e[38;5;196m'   # Red
+GREEN='\e[38;5;46m'  # Green
+YELLOW='\e[38;5;226m' # Yellow
+BLUE='\e[38;5;21m'   # Blue
+PURPLE='\e[38;5;129m' # Purple
+CYAN='\e[38;5;51m'   # Cyan
+WHITE='\e[38;5;15m'  # White
+ORANGE='\e[38;5;208m' # Orange
+
 
 # Functions
 error   () { echo -e "${RED}${*}${NC}";exit 1;:; }
 warning () { echo -e "${YELLOW}${*}${NC}";:; }
 info    () { echo -e "${GREEN}-----";echo -e "# ${*}";echo -e "-----${NC}";:; }
-log     () { echo -e "${BLUE}${*}${NC}";:; }
+log     () { echo -e "${CYAN}${*}${NC}";:; }
 
 # Termux package update
 info "Termux package update"
