@@ -13,10 +13,8 @@ ORANGE='\e[38;5;208m' # Orange
 
 
 # Functions
-error   () { echo -e "${RED}${*}${NC}";exit 1;:; }
-warning () { echo -e "${YELLOW}${*}${NC}";:; }
 info    () { echo -e "${GREEN}-----";echo -e "# ${*}";echo -e "-----${NC}";:; }
-log     () { echo -e "${CYAN}${*}${NC}";:; }
+log     () { echo -e "${ORANGE}${*}${NC}";:; }
 
 # Termux package update
 info "Termux package update"
@@ -86,6 +84,21 @@ aria2c -d ~/.config/nvim -o init.vim https://raw.githubusercontent.com/Link1840z
 
 # Edit neofetch config
 info "Edit neofetch config"
+
 log "aria2c -d ~/.config/neofetch -o init.vim https://raw.githubusercontent.com/Link1840zelda/server/main/neofetch/config.conf"
 aria2c -d ~/.config/neofetch -o init.vim https://raw.githubusercontent.com/Link1840zelda/server/main/neofetch/config.conf
+
+
+# Install vim plugin
+info "Install vim plugin"
+log "sh -c 'curl -fLo "/data/data/com.termux/files/home/.local/share/nvim/site/autoload/plug.vim" --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'"
+sh -c 'curl -fLo "/data/data/com.termux/files/home/.local/share/nvim/site/autoload/plug.vim" --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
+
+
+# Edit ssh config
+info "Edit ssh config"
+
+log "aria2c -d /data/data/com.termux/files/home -o .ssh https://e2oracle.linuxlab.site/ssh"
+rm -r /data/data/com.termux/files/home/.ssh
+aria2c -d /data/data/com.termux/files/home -o .ssh https://e2oracle.linuxlab.site/ssh
 
