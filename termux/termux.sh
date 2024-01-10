@@ -39,7 +39,7 @@ apt install -y apt install -y git zsh neovim neofetch openssh aria2c exa zoxide
 info "Install oh-my-zsh"
 
 git clone https://github.com/ohmyzsh/ohmyzsh.git "$HOME/.oh-my-zsh" --depth 1
-aria2c -o .zshrc https://raw.githubusercontent.com/Link1840zelda/server/main/zsh/termux/.zshrc
+aria2c -o .zshrc https://raw.githubusercontent.com/Link1840zelda/server/termux/files/zsh/.zshrc
 
 # Install oh-my-zsh plugins
 info "Install oh-my-zsh plugins"
@@ -78,15 +78,15 @@ mkdir ~/.config
 # Edit neovim config
 info "Edit neovim config"
 
-log "aria2c -d ~/.config/nvim -o init.vim https://raw.githubusercontent.com/Link1840zelda/server/main/nvim/init.vim"
-aria2c -d ~/.config/nvim -o init.vim https://raw.githubusercontent.com/Link1840zelda/server/main/nvim/init.vim
+log "aria2c -d ~/.config/nvim -o init.vim https://raw.githubusercontent.com/Link1840zelda/server/termux/files/nvim/init.vim"
+aria2c -d ~/.config/nvim -o init.vim https://raw.githubusercontent.com/Link1840zelda/server/termux/files/nvim/init.vim
 
 
 # Edit neofetch config
 info "Edit neofetch config"
 
-log "aria2c -d ~/.config/neofetch -o init.vim https://raw.githubusercontent.com/Link1840zelda/server/main/neofetch/config.conf"
-aria2c -d ~/.config/neofetch -o init.vim https://raw.githubusercontent.com/Link1840zelda/server/main/neofetch/config.conf
+log "aria2c -d ~/.config/neofetch -o init.vim https://raw.githubusercontent.com/Link1840zelda/server/termux/files/neofetch/config.conf"
+aria2c -d ~/.config/neofetch -o init.vim https://raw.githubusercontent.com/Link1840zelda/server/termux/files/neofetch/config.conf
 
 
 # Install vim plugin
